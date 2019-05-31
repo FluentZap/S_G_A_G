@@ -7,13 +7,25 @@ export class GalacticAge {
     if (typeof dateOrAge === 'number') {
       this.earthAge = dateOrAge;
     } else {
-      let age = Date.now() - new Date(dateOrAge).getTime();
-      this.earthAge = new Date(age).getUTCFullYear() - 1970;
+      let age = Date.now() - new Date(dateOrAge).getTime();      
+      this.earthAge = new Date(age).getUTCFullYear() - 1970;      
     }
   }
 
   getMercuryAge() {
     return Math.floor(this.earthAge * 0.24);
+  }
+
+  getVenusAge() {
+    return Math.floor(this.earthAge * 0.62);
+  }
+
+  getMarsAge() {
+    return Math.floor(this.earthAge * 1.88);
+  }
+
+  getJupiterAge() {
+    return Math.floor(this.earthAge * 11.86);
   }
 
  }
