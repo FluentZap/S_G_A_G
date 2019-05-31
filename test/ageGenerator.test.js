@@ -9,19 +9,19 @@ describe('Galactic Age', () => {
   });
 
   test('converts 20 earth years to 4 Mercury years', () => {    
-    expect(age.getMercuryAge()).toEqual(4);
+    expect(age.getGalacticAge("Mercury")).toEqual(4);
   });
 
   test('converts 20 earth years to 12 Venus years', () => {    
-    expect(age.getVenusAge()).toEqual(12);
+    expect(age.getGalacticAge("Venus")).toEqual(12);
   });
 
   test('converts 20 earth years to 37 Mars years', () => {    
-    expect(age.getMarsAge()).toEqual(37);
+    expect(age.getGalacticAge("Mars")).toEqual(37);
   });
 
   test('converts 20 earth years to 237 Jupiter years', () => {    
-    expect(age.getJupiterAge()).toEqual(237);
+    expect(age.getGalacticAge("Jupiter")).toEqual(237);
   });
 
 
@@ -34,7 +34,7 @@ describe('Galactic Age', () => {
     global.Date.now = dateNowStub;    
     
     age = new GalacticAge("July 1 2020 UTC");    
-    expect(age.getMarsAge()).toEqual(47);
+    expect(age.getGalacticAge("Mars")).toEqual(47);
     
     expect(dateNowStub).toHaveBeenCalled();
     global.Date.now = realDateNow;
