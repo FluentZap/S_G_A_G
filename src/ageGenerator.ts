@@ -1,8 +1,7 @@
 export class GalacticAge {  
   private earthAge: number;
   
-  constructor()
-  constructor(earthAge: number) 
+  constructor(earthAge: number)
   constructor(birthDay: string)
   constructor(dateOrAge?: number | string) {
     if (typeof dateOrAge === 'number') {
