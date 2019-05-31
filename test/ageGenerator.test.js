@@ -6,7 +6,7 @@ describe('Galactic Age', () => {
 
 test('converts 20 earth years to 4 Mercury years', () => {    
   let age = new GalacticAge(20);
-  expect(age.getMercuryAge()).ToEqual(4);  
+  expect(age.getMercuryAge()).toEqual(4);  
 });
 
 
