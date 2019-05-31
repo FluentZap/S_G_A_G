@@ -28,12 +28,12 @@ describe('Galactic Age', () => {
   test('converts 25 year old with birthday to 47 Mars years', () => {
     //build a mock function and overwrite the default js function
     //mock function will always return 1593561600000 July 1st 2020 UTC
-    //it will test it to the 'current day' of April 1 2045 UTC or 2374617600000
+    //it will test it to the 'current day' of September 1 2045 UTC or 2393107200000
     const realDateNow = Date.now.bind(global.Date);
-    const dateNowStub = jest.fn(() => 2374617600000);
+    const dateNowStub = jest.fn(() => 2393107200000);
     global.Date.now = dateNowStub;    
     
-    age = new GalacticAge("July 1st 2020 UTC");    
+    age = new GalacticAge("July 1 2020 UTC");    
     expect(age.getMarsAge()).toEqual(47);
     
     expect(dateNowStub).toHaveBeenCalled();
