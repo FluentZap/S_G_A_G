@@ -26,7 +26,7 @@ If the current date is before the person is born there life expectancy will be l
 ### Assuming the date is July 1st 2010 UTC
 | Story | Input | Output |
 |-|-|-|
-| User inputs age as birthday and gets current life expectancy in 'years on Earth' | ("March 15 1952 UTC") | 10 |
+| User inputs age as birthday and gets current life expectancy in 'years on Earth' | ("March 15 1952 UTC"), ("Earth") | 10 |
 | User inputs age as birthday and gets 'years on Earth' as a default | "March 15 1952 UTC" | 10 |
 | User inputs age as birthday and gets current life expectancy in 'years on Mars' | "March 15 1952 UTC", "Mars" | 18 |
 | User inputs age as birthday born after 2014 and in the future and gets current life expectancy of 80 | "March 15 2020 UTC" | 80 |
